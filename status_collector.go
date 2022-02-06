@@ -67,6 +67,11 @@ func newStatusCollector(baseUrl string) *statusCollector {
 func (c *statusCollector) Describe(ch chan<- *prometheus.Desc) {
 	// describe each metric
 	ch <- c.oatMetric
+	ch <- c.filterLevelMetric
+	ch <- c.rtMetric
+	ch <- c.rhMetric
+	ch <- c.htspMetric
+	ch <- c.clspMetric
 }
 
 func (c *statusCollector) Collect(ch chan<- prometheus.Metric) {
