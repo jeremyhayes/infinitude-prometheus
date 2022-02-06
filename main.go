@@ -22,8 +22,10 @@ func main() {
 	}))
 
 	infinitudeBaseUrl := os.Getenv("INFINITUDE_BASE_URL")
-	infinitudeCollector := newStatusCollector(infinitudeBaseUrl)
-	prometheus.Register(infinitudeCollector)
+	statusCollector := newStatusCollector(infinitudeBaseUrl)
+	prometheus.Register(statusCollector)
+	energyCollector := newEnergyCollector(infinitudeBaseUrl)
+	prometheus.Register(energyCollector)
 
 	http.HandleFunc("/health", health)
 	http.Handle("/metrics", promhttp.Handler())
