@@ -1,0 +1,397 @@
+{
+  "energy": [
+    {
+      "cooling": [
+        {
+          "enabled": "on",
+          "display": "on"
+        }
+      ],
+      "fan": [
+        {
+          "display": "on",
+          "enabled": "on"
+        }
+      ],
+      "reheat": [
+        {
+          "enabled": "on",
+          "display": "off"
+        }
+      ],
+      "hspf": [
+        "8.8"
+      ],
+      "seer": [
+        "15.0"
+      ],
+      "usage": [
+        {
+          "period": [
+            {
+              "eheat": [
+                "0"
+              ],
+              "fangas": [
+                "0"
+              ],
+              "reheat": [
+                "0"
+              ],
+              "fan": [
+                "2"
+              ],
+              "cooling": [
+                "0"
+              ],
+              "looppump": [
+                "0"
+              ],
+              "hpheat": [
+                "0"
+              ],
+              "gas": [
+                "575"
+              ],
+              "id": "day1"
+            },
+            {
+              "fangas": [
+                "0"
+              ],
+              "eheat": [
+                "0"
+              ],
+              "fan": [
+                "1"
+              ],
+              "reheat": [
+                "0"
+              ],
+              "looppump": [
+                "0"
+              ],
+              "cooling": [
+                "0"
+              ],
+              "gas": [
+                "751"
+              ],
+              "hpheat": [
+                "0"
+              ],
+              "id": "day2"
+            },
+            {
+              "fangas": [
+                "0"
+              ],
+              "eheat": [
+                "0"
+              ],
+              "hpheat": [
+                "0"
+              ],
+              "gas": [
+                "7873"
+              ],
+              "id": "month1",
+              "reheat": [
+                "0"
+              ],
+              "fan": [
+                "53"
+              ],
+              "cooling": [
+                "0"
+              ],
+              "looppump": [
+                "0"
+              ]
+            },
+            {
+              "eheat": [
+                "0"
+              ],
+              "fangas": [
+                "0"
+              ],
+              "looppump": [
+                "0"
+              ],
+              "cooling": [
+                "0"
+              ],
+              "reheat": [
+                "0"
+              ],
+              "fan": [
+                "55"
+              ],
+              "id": "month2",
+              "gas": [
+                "9650"
+              ],
+              "hpheat": [
+                "0"
+              ]
+            },
+            {
+              "fangas": [
+                "0"
+              ],
+              "eheat": [
+                "0"
+              ],
+              "fan": [
+                "26"
+              ],
+              "reheat": [
+                "0"
+              ],
+              "cooling": [
+                "3"
+              ],
+              "looppump": [
+                "0"
+              ],
+              "hpheat": [
+                "0"
+              ],
+              "gas": [
+                "13259"
+              ],
+              "id": "year1"
+            },
+            {
+              "fangas": [
+                "0"
+              ],
+              "eheat": [
+                "0"
+              ],
+              "hpheat": [
+                "0"
+              ],
+              "gas": [
+                "58642"
+              ],
+              "id": "year2",
+              "reheat": [
+                "0"
+              ],
+              "fan": [
+                "341"
+              ],
+              "cooling": [
+                "1980"
+              ],
+              "looppump": [
+                "0"
+              ]
+            }
+          ]
+        }
+      ],
+      "looppump": [
+        {
+          "display": "off",
+          "enabled": "off"
+        }
+      ],
+      "hpheat": [
+        {
+          "display": "off",
+          "enabled": "off"
+        }
+      ],
+      "cost": [
+        {
+          "period": [
+            {
+              "fan": [
+                "0.12"
+              ],
+              "reheat": [
+                "0.00"
+              ],
+              "looppump": [
+                "0.00"
+              ],
+              "cooling": [
+                "0.00"
+              ],
+              "gas": [
+                "2.37"
+              ],
+              "hpheat": [
+                "0.00"
+              ],
+              "id": "day1",
+              "fangas": [
+                "0.00"
+              ],
+              "eheat": [
+                "0.00"
+              ]
+            },
+            {
+              "looppump": [
+                "0.00"
+              ],
+              "cooling": [
+                "0.00"
+              ],
+              "fan": [
+                "0.10"
+              ],
+              "reheat": [
+                "0.00"
+              ],
+              "id": "day2",
+              "gas": [
+                "3.08"
+              ],
+              "hpheat": [
+                "0.00"
+              ],
+              "eheat": [
+                "0.00"
+              ],
+              "fangas": [
+                "0.00"
+              ]
+            },
+            {
+              "reheat": [
+                "0.00"
+              ],
+              "fan": [
+                "5.00"
+              ],
+              "cooling": [
+                "0.00"
+              ],
+              "looppump": [
+                "0.00"
+              ],
+              "hpheat": [
+                "0.00"
+              ],
+              "gas": [
+                "32.70"
+              ],
+              "id": "month1",
+              "fangas": [
+                "0.00"
+              ],
+              "eheat": [
+                "0.00"
+              ]
+            },
+            {
+              "eheat": [
+                "0.00"
+              ],
+              "fangas": [
+                "0.00"
+              ],
+              "hpheat": [
+                "0.00"
+              ],
+              "gas": [
+                "40.30"
+              ],
+              "id": "month2",
+              "reheat": [
+                "0.00"
+              ],
+              "fan": [
+                "5.20"
+              ],
+              "cooling": [
+                "0.00"
+              ],
+              "looppump": [
+                "0.00"
+              ]
+            },
+            {
+              "fangas": [
+                "0.00"
+              ],
+              "eheat": [
+                "0.00"
+              ],
+              "gas": [
+                "55.00"
+              ],
+              "hpheat": [
+                "0.00"
+              ],
+              "id": "year1",
+              "reheat": [
+                "0.00"
+              ],
+              "fan": [
+                "2.00"
+              ],
+              "looppump": [
+                "0.00"
+              ],
+              "cooling": [
+                "0.00"
+              ]
+            },
+            {
+              "cooling": [
+                "159.00"
+              ],
+              "looppump": [
+                "0.00"
+              ],
+              "fan": [
+                "18.00"
+              ],
+              "reheat": [
+                "0.00"
+              ],
+              "id": "year2",
+              "hpheat": [
+                "0.00"
+              ],
+              "gas": [
+                "276.00"
+              ],
+              "eheat": [
+                "0.00"
+              ],
+              "fangas": [
+                "0.00"
+              ]
+            }
+          ]
+        }
+      ],
+      "gas": [
+        {
+          "enabled": "on",
+          "display": "on"
+        }
+      ],
+      "version": "1.7",
+      "eheat": [
+        {
+          "display": "off",
+          "enabled": "on"
+        }
+      ],
+      "fangas": [
+        {
+          "enabled": "on",
+          "display": "on"
+        }
+      ]
+    }
+  ]
+}

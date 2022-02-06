@@ -1,0 +1,361 @@
+{
+  "status": [
+    {
+      "version": "1.7",
+      "oat": [
+        "48"
+      ],
+      "cfgtype": [
+        "heatcool"
+      ],
+      "uvlvl": [
+        "100"
+      ],
+      "humid": [
+        "off"
+      ],
+      "oprstsmsg": [
+        "idle"
+      ],
+      "localTime": [
+        "2022-01-25T20:58:57-05:00"
+      ],
+      "cfgem": [
+        "F"
+      ],
+      "humlvl": [
+        "100"
+      ],
+      "zones": [
+        {
+          "zone": [
+            {
+              "rt": [
+                "70.0"
+              ],
+              "enabled": [
+                "on"
+              ],
+              "rh": [
+                "42"
+              ],
+              "hold": [
+                "off"
+              ],
+              "htsp": [
+                "70.0"
+              ],
+              "damperposition": [
+                "15"
+              ],
+              "zoneconditioning": [
+                "active_heat"
+              ],
+              "name": [
+                "ZONE 1"
+              ],
+              "clsp": [
+                "74.0"
+              ],
+              "fan": [
+                "low"
+              ],
+              "otmr": [
+                {}
+              ],
+              "id": "1",
+              "currentActivity": [
+                "home"
+              ]
+            },
+            {
+              "currentActivity": [
+                "home"
+              ],
+              "id": "2",
+              "otmr": [
+                {}
+              ],
+              "fan": [
+                "off"
+              ],
+              "name": [
+                "Zone 2"
+              ],
+              "clsp": [
+                "76.0"
+              ],
+              "damperposition": [
+                "15"
+              ],
+              "zoneconditioning": [
+                "active_heat"
+              ],
+              "htsp": [
+                "68.0"
+              ],
+              "hold": [
+                "off"
+              ],
+              "rt": [
+                {}
+              ],
+              "enabled": [
+                "off"
+              ],
+              "rh": [
+                "42"
+              ]
+            },
+            {
+              "currentActivity": [
+                "home"
+              ],
+              "id": "3",
+              "otmr": [
+                {}
+              ],
+              "damperposition": [
+                "15"
+              ],
+              "zoneconditioning": [
+                "active_heat"
+              ],
+              "fan": [
+                "off"
+              ],
+              "name": [
+                "Zone 3"
+              ],
+              "clsp": [
+                "76.0"
+              ],
+              "rt": [
+                {}
+              ],
+              "enabled": [
+                "off"
+              ],
+              "rh": [
+                "42"
+              ],
+              "htsp": [
+                "68.0"
+              ],
+              "hold": [
+                "off"
+              ]
+            },
+            {
+              "otmr": [
+                {}
+              ],
+              "currentActivity": [
+                "home"
+              ],
+              "id": "4",
+              "htsp": [
+                "68.0"
+              ],
+              "hold": [
+                "off"
+              ],
+              "rh": [
+                "42"
+              ],
+              "enabled": [
+                "off"
+              ],
+              "rt": [
+                {}
+              ],
+              "fan": [
+                "off"
+              ],
+              "clsp": [
+                "76.0"
+              ],
+              "name": [
+                "Zone 4"
+              ],
+              "zoneconditioning": [
+                "active_heat"
+              ],
+              "damperposition": [
+                "15"
+              ]
+            },
+            {
+              "rt": [
+                {}
+              ],
+              "enabled": [
+                "off"
+              ],
+              "rh": [
+                "42"
+              ],
+              "hold": [
+                "off"
+              ],
+              "htsp": [
+                "68.0"
+              ],
+              "damperposition": [
+                "15"
+              ],
+              "zoneconditioning": [
+                "active_heat"
+              ],
+              "name": [
+                "Zone 5"
+              ],
+              "clsp": [
+                "76.0"
+              ],
+              "fan": [
+                "off"
+              ],
+              "otmr": [
+                {}
+              ],
+              "id": "5",
+              "currentActivity": [
+                "home"
+              ]
+            },
+            {
+              "rt": [
+                {}
+              ],
+              "rh": [
+                "42"
+              ],
+              "enabled": [
+                "off"
+              ],
+              "hold": [
+                "off"
+              ],
+              "htsp": [
+                "68.0"
+              ],
+              "damperposition": [
+                "15"
+              ],
+              "zoneconditioning": [
+                "active_heat"
+              ],
+              "name": [
+                "Zone 6"
+              ],
+              "clsp": [
+                "76.0"
+              ],
+              "fan": [
+                "off"
+              ],
+              "otmr": [
+                {}
+              ],
+              "id": "6",
+              "currentActivity": [
+                "home"
+              ]
+            },
+            {
+              "hold": [
+                "off"
+              ],
+              "htsp": [
+                "68.0"
+              ],
+              "rt": [
+                {}
+              ],
+              "rh": [
+                "42"
+              ],
+              "enabled": [
+                "off"
+              ],
+              "name": [
+                "Zone 7"
+              ],
+              "clsp": [
+                "76.0"
+              ],
+              "fan": [
+                "off"
+              ],
+              "damperposition": [
+                "15"
+              ],
+              "zoneconditioning": [
+                "active_heat"
+              ],
+              "otmr": [
+                {}
+              ],
+              "id": "7",
+              "currentActivity": [
+                "home"
+              ]
+            },
+            {
+              "hold": [
+                "off"
+              ],
+              "htsp": [
+                "68.0"
+              ],
+              "rh": [
+                "42"
+              ],
+              "enabled": [
+                "off"
+              ],
+              "rt": [
+                {}
+              ],
+              "clsp": [
+                "76.0"
+              ],
+              "name": [
+                "Zone 8"
+              ],
+              "fan": [
+                "off"
+              ],
+              "zoneconditioning": [
+                "active_heat"
+              ],
+              "damperposition": [
+                "15"
+              ],
+              "otmr": [
+                {}
+              ],
+              "id": "8",
+              "currentActivity": [
+                "home"
+              ]
+            }
+          ]
+        }
+      ],
+      "vacatrunning": [
+        "off"
+      ],
+      "mode": [
+        "gasheat"
+      ],
+      "filtrlvl": [
+        "47"
+      ],
+      "ventlvl": [
+        "100"
+      ]
+    }
+  ]
+}
