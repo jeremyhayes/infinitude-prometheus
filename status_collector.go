@@ -3,7 +3,6 @@ package main
 import (
 	"fmt"
 	"log"
-	"strconv"
 
 	"github.com/prometheus/client_golang/prometheus"
 )
@@ -83,12 +82,8 @@ func (c *statusCollector) Collect(ch chan<- prometheus.Metric) {
 
 	// update metric values
 	status := statusRes.Status[0]
-
-	oatValue, _ := strconv.ParseFloat(status.Oat[0], 32)
-	ch <- gauge(c.oatMetric, oatValue)
-
-	filterLevelValue, _ := strconv.ParseFloat(status.FiltrLvl[0], 32)
-	ch <- gauge(c.filterLevelMetric, filterLevelValue)
+	ch <- gauge(c.oatMetric, parseFloat(status.Oat[0]))
+	ch <- gauge(c.filterLevelMetric, parseFloat(status.FiltrLvl[0]))
 
 	for _, zones := range status.Zones {
 		zone := zones.Zone[0]
@@ -98,23 +93,17 @@ func (c *statusCollector) Collect(ch chan<- prometheus.Metric) {
 			continue
 		}
 
-		rhValue, _ := strconv.ParseFloat(zone.Rh[0], 32)
-		ch <- gauge(c.rhMetric, rhValue, id)
+		ch <- gauge(c.rhMetric, parseFloat(zone.Rh[0]), id)
 
 		// rt is an empty object when zone not enabled
-		var rtValue float64
 		if rt, err := zone.Rt[0].(string); err {
-			rtValue, _ = strconv.ParseFloat(rt, 32)
+			ch <- gauge(c.rtMetric, parseFloat(rt), id)
 		} else {
-			rtValue = 0
+			ch <- gauge(c.rtMetric, 0, id)
 		}
-		ch <- gauge(c.rtMetric, rtValue, id)
 
-		htspValue, _ := strconv.ParseFloat(zone.Htsp[0], 32)
-		ch <- gauge(c.htspMetric, htspValue, id)
-
-		clspValue, _ := strconv.ParseFloat(zone.Clsp[0], 32)
-		ch <- gauge(c.clspMetric, clspValue, id)
+		ch <- gauge(c.htspMetric, parseFloat(zone.Htsp[0]), id)
+		ch <- gauge(c.clspMetric, parseFloat(zone.Clsp[0]), id)
 	}
 
 }
