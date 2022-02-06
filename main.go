@@ -2,7 +2,7 @@ package main
 
 import (
 	"encoding/json"
-	"fmt"
+	"log"
 	"net/http"
 	"os"
 
@@ -12,8 +12,6 @@ import (
 )
 
 func main() {
-	fmt.Println("starting http server...")
-
 	// disable default process and go metrics collectors, too noisy
 	prometheus.Unregister(collectors.NewGoCollector())
 	prometheus.Unregister(collectors.NewProcessCollector(collectors.ProcessCollectorOpts{
@@ -23,8 +21,13 @@ func main() {
 		Namespace: "",
 	}))
 
+	infinitudeCollector := newInfinitudeCollector()
+	prometheus.Register(infinitudeCollector)
+
 	http.HandleFunc("/health", health)
 	http.Handle("/metrics", promhttp.Handler())
+
+	log.Println("Starting http server on :8080...")
 	http.ListenAndServe(":8080", nil)
 }
 

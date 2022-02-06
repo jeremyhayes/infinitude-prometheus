@@ -10,7 +10,7 @@ RUN go mod download
 COPY . .
 
 # build
-RUN CGO_ENABLED=0 GOOS=linux go build -a -v -o infinitude-prometheus main.go
+RUN CGO_ENABLED=0 GOOS=linux go build -a -v -o infinitude-prometheus .
 
 
 FROM alpine as final
