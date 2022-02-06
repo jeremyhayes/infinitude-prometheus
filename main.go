@@ -21,13 +21,15 @@ func main() {
 		Namespace: "",
 	}))
 
-	infinitudeCollector := newInfinitudeCollector()
+	infinitudeBaseUrl := os.Getenv("INFINITUDE_BASE_URL")
+	infinitudeCollector := newInfinitudeCollector(infinitudeBaseUrl)
 	prometheus.Register(infinitudeCollector)
 
 	http.HandleFunc("/health", health)
 	http.Handle("/metrics", promhttp.Handler())
 
 	log.Println("Starting http server on :8080...")
+	log.Printf("Monitoring Infinitude instance at %s\n", infinitudeBaseUrl)
 	http.ListenAndServe(":8080", nil)
 }
 
