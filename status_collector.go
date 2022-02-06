@@ -12,7 +12,7 @@ import (
 
 // https://rsmitty.github.io/Prometheus-Exporters/
 
-type infinitudeCollector struct {
+type statusCollector struct {
 	statusJsonUrl     string
 	oatMetric         *prometheus.Desc
 	filterLevelMetric *prometheus.Desc
@@ -22,9 +22,9 @@ type infinitudeCollector struct {
 	clspMetric        *prometheus.Desc
 }
 
-func newInfinitudeCollector(baseUrl string) *infinitudeCollector {
+func newStatusCollector(baseUrl string) *statusCollector {
 	statusJsonUrl := fmt.Sprintf("%s/status.json", baseUrl)
-	return &infinitudeCollector{
+	return &statusCollector{
 		statusJsonUrl: statusJsonUrl,
 		oatMetric: prometheus.NewDesc(
 			"infinitude_status_oat",
@@ -64,12 +64,12 @@ func newInfinitudeCollector(baseUrl string) *infinitudeCollector {
 	}
 }
 
-func (c *infinitudeCollector) Describe(ch chan<- *prometheus.Desc) {
+func (c *statusCollector) Describe(ch chan<- *prometheus.Desc) {
 	// describe each metric
 	ch <- c.oatMetric
 }
 
-func (c *infinitudeCollector) Collect(ch chan<- prometheus.Metric) {
+func (c *statusCollector) Collect(ch chan<- prometheus.Metric) {
 	// fetch data
 	statusRes := &StatusResponse{}
 	err := getJson(c.statusJsonUrl, statusRes)
