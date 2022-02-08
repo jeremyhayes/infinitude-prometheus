@@ -1,4 +1,4 @@
-module jeremyhayes.net/go/infinitude-prometheus
+module github.com/jeremyhayes/infinitude-prometheus
 
 go 1.17
 
