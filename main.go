@@ -6,6 +6,8 @@ import (
 	"net/http"
 	"os"
 
+	infinitude "github.com/jeremyhayes/infinitude-prometheus/collectors"
+
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/collectors"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
@@ -22,9 +24,9 @@ func main() {
 	}))
 
 	infinitudeBaseUrl := os.Getenv("INFINITUDE_BASE_URL")
-	statusCollector := newStatusCollector(infinitudeBaseUrl)
+	statusCollector := infinitude.NewStatusCollector(infinitudeBaseUrl)
 	prometheus.Register(statusCollector)
-	energyCollector := newEnergyCollector(infinitudeBaseUrl)
+	energyCollector := infinitude.NewEnergyCollector(infinitudeBaseUrl)
 	prometheus.Register(energyCollector)
 
 	http.HandleFunc("/health", health)

@@ -1,4 +1,4 @@
-package main
+package collectors
 
 import (
 	"fmt"
@@ -31,7 +31,7 @@ type energyCollector struct {
 	costGas           *prometheus.Desc
 }
 
-func newEnergyCollector(baseUrl string) *energyCollector {
+func NewEnergyCollector(baseUrl string) *energyCollector {
 	energyJsonUrl := fmt.Sprintf("%s/energy.json", baseUrl)
 	return &energyCollector{
 		energyJsonUrl: energyJsonUrl,

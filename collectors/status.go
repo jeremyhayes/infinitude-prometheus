@@ -1,4 +1,4 @@
-package main
+package collectors
 
 import (
 	"fmt"
@@ -19,7 +19,7 @@ type statusCollector struct {
 	clspMetric        *prometheus.Desc
 }
 
-func newStatusCollector(baseUrl string) *statusCollector {
+func NewStatusCollector(baseUrl string) *statusCollector {
 	statusJsonUrl := fmt.Sprintf("%s/status.json", baseUrl)
 	return &statusCollector{
 		statusJsonUrl: statusJsonUrl,
