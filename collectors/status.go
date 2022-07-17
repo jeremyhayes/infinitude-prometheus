@@ -73,15 +73,21 @@ func (c *statusCollector) Describe(ch chan<- *prometheus.Desc) {
 
 func (c *statusCollector) Collect(ch chan<- prometheus.Metric) {
 	// fetch data
-	statusRes := &StatusResponse{}
-	err := getJson(c.statusJsonUrl, statusRes)
+	resp := &StatusResponse{}
+	err := getJson(c.statusJsonUrl, resp)
 	if err != nil {
 		log.Printf("error fetching status %+v", err)
 		return
 	}
 
+	// check empty response
+	if len(resp.Status) == 0 {
+		log.Print("no status data returned")
+		return
+	}
+
 	// update metric values
-	status := statusRes.Status[0]
+	status := resp.Status[0]
 	ch <- gauge(c.oatMetric, parseFloat(status.Oat[0]))
 	ch <- gauge(c.filterLevelMetric, parseFloat(status.FiltrLvl[0]))
 

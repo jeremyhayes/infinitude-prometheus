@@ -169,6 +169,12 @@ func (c *energyCollector) Collect(ch chan<- prometheus.Metric) {
 		return
 	}
 
+	// check empty response
+	if len(resp.Energy) == 0 {
+		log.Print("no energy data returned")
+		return
+	}
+
 	// update metric values
 	energy := resp.Energy[0]
 
