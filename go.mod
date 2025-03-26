@@ -1,6 +1,7 @@
 module github.com/jeremyhayes/infinitude-prometheus
 
-go 1.17
+go 1.21
+
 toolchain go1.24.1
 
 require github.com/prometheus/client_golang v1.21.1
