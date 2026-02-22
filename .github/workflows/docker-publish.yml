@@ -37,9 +37,6 @@ jobs:
       - name: Set up QEMU
         id: qemu
         uses: docker/setup-qemu-action@c7c53464625b32c7a7e944ae62b3e17d2b600130
-        with:
-          image: tonistiigi/binfmt:qemu-v6.0.0
-          platforms: all
 
       # Report available platforms from QEMU
       - name: Available platforms
@@ -84,3 +81,5 @@ jobs:
           push: ${{ startsWith(github.ref, 'refs/tags/v' )}}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
